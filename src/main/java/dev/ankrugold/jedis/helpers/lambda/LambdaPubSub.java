@@ -1,4 +1,4 @@
-package dev.ankrugold.jedis.lambda;
+package dev.ankrugold.jedis.helpers.lambda;
 
 import redis.clients.jedis.JedisPubSub;
 

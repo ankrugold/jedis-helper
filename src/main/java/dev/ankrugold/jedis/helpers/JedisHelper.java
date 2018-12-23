@@ -1,7 +1,7 @@
-package dev.ankrugold.jedis;
+package dev.ankrugold.jedis.helpers;
 
-import dev.ankrugold.jedis.future.FuturePipeLine;
-import dev.ankrugold.jedis.lambda.LambdaPubSub;
+import dev.ankrugold.jedis.helpers.future.FuturePipeLine;
+import dev.ankrugold.jedis.helpers.lambda.LambdaPubSub;
 import redis.clients.jedis.Jedis;
 
 import java.util.List;

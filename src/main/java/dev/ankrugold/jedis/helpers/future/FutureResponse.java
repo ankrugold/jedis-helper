@@ -1,4 +1,4 @@
-package dev.ankrugold.jedis.future;
+package dev.ankrugold.jedis.helpers.future;
 
 import redis.clients.jedis.Response;
 

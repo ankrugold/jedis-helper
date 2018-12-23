@@ -1,11 +1,9 @@
-package dev.ankrugold.jedis.future;
+package dev.ankrugold.jedis.helpers.future;
 
 import redis.clients.jedis.Builder;
 import redis.clients.jedis.Pipeline;
 import redis.clients.jedis.Response;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
 

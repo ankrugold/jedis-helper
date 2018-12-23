@@ -1,7 +1,8 @@
 package dev.ankrugold.jedis;
 
-import dev.ankrugold.jedis.future.FuturePipeLine;
-import dev.ankrugold.jedis.future.FutureResponse;
+import dev.ankrugold.jedis.helpers.JedisHelper;
+import dev.ankrugold.jedis.helpers.future.FuturePipeLine;
+import dev.ankrugold.jedis.helpers.future.FutureResponse;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
@@ -40,7 +41,7 @@ public class JedisHelperTest {
         }
     }
 
-    public void publish(CountDownLatch cl) {
+    private void publish(CountDownLatch cl) {
         new Thread(() ->
         {
             try {
