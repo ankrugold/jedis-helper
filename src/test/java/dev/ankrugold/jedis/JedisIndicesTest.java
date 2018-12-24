@@ -3,8 +3,8 @@ package dev.ankrugold.jedis;
 import com.github.davidmoten.geo.GeoHash;
 import com.github.davidmoten.geo.LatLong;
 import dev.ankrugold.jedis.indices.geohash.GeoHashIndex;
-import dev.ankrugold.jedis.indices.JavaPolygon;
 import dev.ankrugold.jedis.indices.RedisIndices;
+import dev.ankrugold.jedis.indices.geohash.Polygon;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
@@ -23,7 +23,7 @@ public class JedisIndicesTest {
         LatLong c4 = new LatLong(40.84768, 14.27870);
         LatLong c5 = new LatLong(40.858716, 14.27715);
         Arrays.asList(c1,c2,c3,c4,c5).forEach(x ->  System.out.println(x.getLon() + "," + x.getLat()));
-        JavaPolygon polygon = new JavaPolygon(Arrays.asList(c1, c2, c3, c4, c5));
+        Polygon polygon = new Polygon(Arrays.asList(c1, c2, c3, c4, c5));
         HashSet<String> hashes = GeoHashIndex.getHashes(polygon, 6);
         for (String hash : hashes) {
             LatLong x = GeoHash.decodeHash(hash);
